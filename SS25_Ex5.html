@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function countPositiveIntegers(arr) {
+        let count = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+          if (Number.isInteger(arr[i]) && arr[i] > 0) {
+            count++;
+          }
+        }
+
+        return count;
+      }
+
+      // Ví dụ:
+      const mixedArray = [1, -2, 3.5, 4, "hello", 6, 0, 8, -10];
+      console.log(countPositiveIntegers(mixedArray)); // Output: 4
+    </script>
+  </body>
+</html>

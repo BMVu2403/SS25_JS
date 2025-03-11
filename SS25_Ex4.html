@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPrime(n) {
+        if (n < 2) {
+          return false; // Số nhỏ hơn 2 không phải số nguyên tố
+        }
+
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) {
+            return false; // Nếu n chia hết cho i, không phải số nguyên tố
+          }
+        }
+
+        return true; // Nếu không chia hết cho số nào khác ngoài 1 và chính nó, là số nguyên tố
+      }
+
+      // Ví dụ:
+      console.log(isPrime(2)); // Output: true
+      console.log(isPrime(11)); // Output: true
+      console.log(isPrime(15)); // Output: false
+      console.log(isPrime(1)); // Output: false
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function isPalindrome(str) {
+        let length = str.length;
+
+        for (let i = 0; i < Math.floor(length / 2); i++) {
+          if (str[i] !== str[length - 1 - i]) {
+            return false; // Nếu có ký tự không khớp, không phải chuỗi đối xứng
+          }
+        }
+
+        return true; // Nếu duyệt hết mà không có lỗi, là chuỗi đối xứng
+      }
+
+      // Nhập chuỗi từ người dùng
+      let userInput = prompt("Nhập vào một chuỗi để kiểm tra đối xứng:");
+
+      // Kiểm tra và hiển thị kết quả
+      if (isPalindrome(userInput)) {
+        alert("Chuỗi bạn nhập là chuỗi đối xứng!");
+      } else {
+        alert("Chuỗi bạn nhập không phải là chuỗi đối xứng.");
+      }
+    </script>
+  </body>
+</html>
